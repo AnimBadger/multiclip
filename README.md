@@ -1,0 +1,1 @@
+In this repository I will create a simple project that will help to save multiple texts to the clipboard in python. 
