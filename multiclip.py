@@ -21,7 +21,7 @@ def load_clip(filepath):
     Return: data saved in clipboard
     '''
     try:
-        with open(filepath) as file:
+        with open(filepath, 'r') as file:
             data = json.load(file)
             return data
     except:
@@ -33,7 +33,7 @@ if len(sys.argv) == 2:
     
     if command == 'save':
         key = input('Enter a key to save with: ')
-        data['key'] = clipboard.paste()
+        data[key] = clipboard.paste()
         save_clip(SAVED_DATA, data)
         print('Data saved')
         
